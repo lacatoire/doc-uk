@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- EN-Revision: 52bf027d4cb01fee7d4e33095d3c5ecd6f76fff1 Maintainer: mproshchuk Status: ready -->
-<refentry xml:id="parallel-events-input.remove" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- EN-Revision: 57c7669a1f5336cb17413e0b46540c52c77ee84f Maintainer: mproshchuk Status: ready -->
+<refentry xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="parallel-events-input.remove">
  <refnamediv>
   <refname>parallel\Events\Input::remove</refname>
   <refpurpose>Вхідні дані</refpurpose>
@@ -12,23 +12,22 @@
    <modifier>public</modifier> <type>void</type><methodname>parallel\Events\Input::remove</methodname>
    <methodparam><type>string</type><parameter>target</parameter></methodparam>
   </methodsynopsis>
-  <para>
+  <simpara>
     Вилучає вхідні дані з обраної цілі.
-  </para>
+  </simpara>
  </refsect1>
 
  <refsect1 role="exceptions">
   <title>Виключення</title>
   <warning>
-   <para>
+   <simpara>
     Кидає <type>parallel\Events\Input\Error\Existence</type>, якщо вхідні дані
     для цілі не задано.
-   </para>
+   </simpara>
   </warning>
  </refsect1>
 
 </refentry>
-
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml

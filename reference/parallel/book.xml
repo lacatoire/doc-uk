@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- EN-Revision: bbfa9738785f054752e6cb565cd0a58e71015bc6 Maintainer: mproshchuk Status: ready -->
-<book xml:id="book.parallel" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude">
+<!-- EN-Revision: 57c7669a1f5336cb17413e0b46540c52c77ee84f Maintainer: mproshchuk Status: ready -->
+<book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="book.parallel">
  <?phpdoc extension-membership="pecl" ?>
  <title>parallel</title>
  <titleabbrev>parallel</titleabbrev>
 
  <preface xml:id="intro.parallel">
   &reftitle.intro;
-  <para>
+  <simpara>
   Розширення parallel дозволяє виконувати PHP-код в паралельних потоках.
   Воно доступне в PHP ≥ 7.2.0. Для parallel ≥ 1.2.0 потрібна версія PHP ≥ 8.0.0.
-  </para>
-  <para>
+  </simpara>
+  <simpara>
    Це стислий опис загального алгоритму parallel. Більше інформації є в
    наступних частинах розділу.
-  </para>
+  </simpara>
   <simplesect>
    <title>Клас Runtime</title>
-   <para>
+   <simpara>
     Клас <classname>parallel\Runtime</classname> представляє потік
     інтерпретатора PHP. Клас <classname>parallel\Runtime</classname>
     можна налаштувати за допомогою необов'язкового файлу ініціалізації, який
@@ -25,8 +25,8 @@
     <methodname>parallel\Runtime::__construct</methodname>. Зазвичай цей файл є
     автозавантажувачем чи чимсь на кшталт процедури попереднього завантаження:
     він буде підключатися перед виконанням кожного завдання.
-   </para>
-   <para>
+   </simpara>
+   <simpara>
     Після створення, примірник <classname>parallel\Runtime</classname>
     залишається доступним, допоки його не закриють чи знищать відповідно до
     правил визначення області видимості об'єктів PHP. Метод
@@ -35,16 +35,16 @@
     <classname>parallel\Runtime</classname> послуговується принципом FIFO
     (перший прийшов — перший вийшов), тобто завдання виконуються в тій
     послідовності, у якій вони були заплановані.
-   </para>
+   </simpara>
   </simplesect>
   <simplesect>
    <title>Функціональний API</title>
-   <para>
+   <simpara>
     parallel реалізує функціональний API вищого рівня поверх
     <classname>parallel\Runtime</classname>, надаючи єдину функціональну точку
     входу для паралельного виконання коду з автоматичним плануванням — функцію
     <function>parallel\run</function>.
-   </para>
+   </simpara>
   </simplesect>
   <simplesect>
    <title>Завдання</title>
@@ -55,41 +55,41 @@
     вкладені замикання. Проте є інструкції, заборонені в завданнях:
     <itemizedlist>
      <listitem>
-     <para>yield</para>
+     <simpara>yield</simpara>
      </listitem>
      <listitem>
-     <para>посилання</para>
+     <simpara>посилання</simpara>
      </listitem>
      <listitem>
-     <para>оголошення класу</para>
+     <simpara>оголошення класу</simpara>
      </listitem>
      <listitem>
-     <para>оголошення функції з назвою</para>
+     <simpara>оголошення функції з назвою</simpara>
      </listitem>
     </itemizedlist>
    </para>
    <note>
-    <para>
+    <simpara>
      Вкладеним замиканням дозволяється містити інструкції yield або посилання,
      але не оголошення класів чи функцій з назвами.
-    </para>
+    </simpara>
    </note>
    <note>
-    <para>
+    <simpara>
      Скрипти, що підключені в завданнях, жодних обмежень не мають.
-    </para>
+    </simpara>
    </note>
   </simplesect>
   <simplesect>
    <title>Ф'ючерс</title>
-   <para>
+   <simpara>
     Клас <classname>parallel\Future</classname> використовується для доступу до
     значень, що повертає завдання, і надає API для скасування завдання.
-   </para>
+   </simpara>
   </simplesect>
   <simplesect>
    <title>Канал</title>
-   <para>
+   <simpara>
     Завдання можна можна додати в чергу, вказати йому параметри, використовувати
     змінні лексичної області (тобто за значенням), та отримати результат
     виконання (через клас <classname>parallel\Future</classname>), таким чином
@@ -99,11 +99,11 @@
     <classname>parallel\Channel</classname>, який утворює сокет-подібний зв'язок
     між завданнями, який програміст може використовувати для надсилання та
     отримання даних.
-   </para>
+   </simpara>
   </simplesect>
   <simplesect>
    <title>Події</title>
-   <para>
+   <simpara>
     API <classname>parallel\Events</classname> реалізує власний цикл подій
     (<classname>Traversable</classname>) та метод
     <methodname>parallel\Events::poll</methodname>. Це дозволяє програмісту
@@ -115,12 +115,12 @@
     об'єкти, коли вони стануть доступні, створюючи примірники
     <classname>parallel\Events\Event</classname>, що описують операції, які
     відбулися.
-   </para>
+   </simpara>
   </simplesect>
    <simplesect role="seealso">
    &reftitle.seealso;
    <simplelist>
-    <member><xref linkend="philosophy.parallel" /></member>
+    <member><xref linkend="philosophy.parallel"/></member>
    </simplelist>
   </simplesect>
  </preface>
@@ -140,7 +140,6 @@
  <!--&reference.parallel.examples;-->
 
 </book>
-
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml
