@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- EN-Revision: 96c9d88bad9a7d7d44bfb7f26c226df7ee9ddf26 Maintainer: ktretyak Status: ready -->
+<!-- EN-Revision: b5efbef2d37f240fb430ad7c9887c3b8d4e59b92 Maintainer: ktretyak Status: ready -->
 <!-- $Revision$ -->
-<section xml:id="mqseries.resources" xmlns="http://docbook.org/ns/docbook">
+<section xmlns="http://docbook.org/ns/docbook" xml:id="mqseries.resources">
  &reftitle.resources;
- <para>
+ <simpara>
   Це розширення визначає підключення та ресурси object_handle.
- </para>
- <para>
+ </simpara>
+ <simpara>
   Фукнція <function>mqseries_conn</function> та <function>mqseries_connx</function>
   визначають обробку підключень.
- </para>
- <para> 
+ </simpara>
+ <simpara>
   Функція <function>mqseries_open</function> визначає обробника об'єкта.
- </para>
+ </simpara>
 </section>
-
 <!-- Keep this comment at the end of the file
  Local variables:
  mode: sgml
