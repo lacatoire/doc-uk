@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- EN-Revision: b2e83b46c6aa7f8278e80d3c0e8a049b7583f6cc Maintainer: ktretyak Status: ready -->
+<!-- EN-Revision: 0ba9e74ebc71fc8aa5fcd0f5f48654a4a6a83368 Maintainer: ktretyak Status: ready -->
 <!-- $Revision$ -->
-
 <chapter xml:id="fpm.setup">
  &reftitle.setup;
 
- <para>
+ <simpara>
   Інформацію про встановлення та конфігурування FPM можна знайти в розділі
   <link linkend="install.fpm">встановлення та конфігурація PHP</link>.
- </para>
+ </simpara>
 
 </chapter>
-
 <!-- Keep this comment at the end of the file
 Local variables:
 mode: sgml
